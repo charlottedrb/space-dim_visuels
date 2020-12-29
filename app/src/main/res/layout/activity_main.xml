@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <soup.neumorphism.NeumorphCardView
+    // Pre-defined style
+    style="@style/Widget.Neumorph.CardView"
+
+    // Set shadow elevation and colors
+    app:neumorph_shadowElevation="6dp"
+    app:neumorph_shadowColorLight="@color/solid_light_color"
+    app:neumorph_shadowColorDark="@color/solid_dark_color"
+
+    // Set light source
+    app:neumorph_lightSource="leftTop|leftBottom|rightTop|rightBottom"
+
+    // Set shape type and corner size
+    app:neumorph_shapeType="{flat|pressed|basin}"
+    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+
+    // Set background or stroke
+    app:neumorph_backgroundColor="@color/background_color"
+    app:neumorph_strokeColor="@color/stroke_color"
+    app:neumorph_strokeWidth="@dimen/stroke_width"
+
+    // Use a inset to avoid clipping shadow. (default=12dp)
+    app:neumorph_inset="12dp"
+    app:neumorph_insetStart="12dp"
+    app:neumorph_insetEnd="12dp"
+    app:neumorph_insetTop="12dp"
+    app:neumorph_insetBottom="12dp"
+
+    // Use a padding. (default=12dp)
+    android:padding="12dp">
+
+    <!-- NeumorphCardView extends FrameLayout. So you can wrap childrens like this. -->
+
+    </soup.neumorphism.NeumorphCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
